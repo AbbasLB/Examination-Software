@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="552.0" prefWidth="456.0" styleClass="popup" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EditCourseController">
+   <children>
+      <TextField fx:id="txtCourseCode" layoutX="78.0" layoutY="156.0" prefHeight="40.0" prefWidth="300.0" promptText="Course Code">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCredits" layoutX="78.0" layoutY="356.0" prefHeight="40.0" prefWidth="300.0" promptText="Number Of Credits">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCourseDesc" layoutX="78.0" layoutY="256.0" prefHeight="40.0" prefWidth="300.0" promptText="Course Description">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ChoiceBox fx:id="choiceBoxSubject" layoutX="78.0" layoutY="56.0" prefHeight="40.0" prefWidth="300.0" styleClass="subject-box" stylesheets="@styles.css">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Math" />
+               <String fx:value="Info" />
+               <String fx:value="Physics" />
+               <String fx:value="Chemistry" />
+               <String fx:value="Biology" />
+               <String fx:value="Other" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <Button fx:id="btnEditCourse" layoutX="78.0" layoutY="456.0" mnemonicParsing="false" onAction="#onBtnEditCourseClicked" prefHeight="40.0" prefWidth="300.0" styleClass="btn-inner" stylesheets="@styles.css" text="Edit Course" />
+      <StackPane layoutX="416.0" layoutY="14.0" onMouseClicked="#onBtnCloseClicked">
+         <children>
+            <Circle fill="#fa5d57" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+            <ImageView fitHeight="12.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/xShape.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

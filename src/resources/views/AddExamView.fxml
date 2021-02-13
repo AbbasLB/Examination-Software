@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="758.0" styleClass="popup" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddExamController">
+   <children>
+      <AnchorPane fx:id="pnlQuestion" prefHeight="497.0" prefWidth="758.0" styleClass="popup" stylesheets="@styles.css">
+         <children>
+            <TextField fx:id="txtQuestion" layoutX="51.0" layoutY="43.0" onKeyTyped="#onKeyTyped" prefHeight="40.0" prefWidth="574.0" promptText="Question">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtChoiceA" layoutX="51.0" layoutY="114.0" onKeyTyped="#onKeyTyped" prefHeight="40.0" prefWidth="574.0" promptText="Choice A">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtChoiceB" layoutX="51.0" layoutY="185.0" onKeyTyped="#onKeyTyped" prefHeight="40.0" prefWidth="574.0" promptText="Choice B">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtChoiceC" layoutX="51.0" layoutY="256.0" onKeyTyped="#onKeyTyped" prefHeight="40.0" prefWidth="574.0" promptText="Choice C">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtChoiceD" layoutX="51.0" layoutY="327.0" onKeyTyped="#onKeyTyped" prefHeight="40.0" prefWidth="574.0" promptText="Choice D">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnAddQuestion" layoutX="51.0" layoutY="396.0" mnemonicParsing="false" onAction="#onBtnAddQuestionClicked" prefHeight="40.0" prefWidth="280.0" styleClass="btn-inner" stylesheets="@styles.css" text="Add Another Question">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDeleteQuestion" layoutX="345.0" layoutY="396.0" mnemonicParsing="false" onAction="#onBtnDeleteQuestionClicked" prefHeight="40.0" prefWidth="280.0" styleClass="btn-inner" stylesheets="@styles.css" text="Delete This Question">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <RadioButton fx:id="radioA" layoutX="673.0" layoutY="111.0" mnemonicParsing="false" onAction="#onActionRadioButtons" prefHeight="40.0" prefWidth="30.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="correct" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioB" layoutX="673.0" layoutY="182.0" mnemonicParsing="false" onAction="#onActionRadioButtons" prefHeight="40.0" prefWidth="30.0" toggleGroup="$correct">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioC" layoutX="674.0" layoutY="253.0" mnemonicParsing="false" onAction="#onActionRadioButtons" prefHeight="40.0" prefWidth="30.0" toggleGroup="$correct">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioD" layoutX="673.0" layoutY="324.0" mnemonicParsing="false" onAction="#onActionRadioButtons" prefHeight="40.0" prefWidth="30.0" toggleGroup="$correct">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="659.0" layoutY="47.0" text="Correct" textFill="#3c3c64">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnPreviousQuestion" layoutX="51.0" layoutY="446.0" mnemonicParsing="false" onAction="#onBtnPreviousQuestionClicked" prefHeight="40.0" prefWidth="280.0" styleClass="btn-inner" stylesheets="@styles.css" text="Previous Question">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNextQuestion" layoutX="345.0" layoutY="446.0" mnemonicParsing="false" onAction="#onBtnNextQuestionClicked" prefHeight="40.0" prefWidth="280.0" styleClass="btn-inner" stylesheets="@styles.css" text="Next Question">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnFinish" layoutX="640.0" layoutY="399.0" mnemonicParsing="false" onAction="#onBtnFinishClicked" prefHeight="86.0" prefWidth="97.0" style="-fx-background-color: #0ab562;" styleClass="btn-inner" stylesheets="@styles.css" text="Finish" textFill="#0ab562">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pnlCreate" prefHeight="478.0" prefWidth="758.0" styleClass="popup" stylesheets="@styles.css">
+         <children>
+            <TextField fx:id="txtExamTitle" layoutX="229.0" layoutY="240.0" prefHeight="40.0" prefWidth="300.0" promptText="Exam Title">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <ChoiceBox fx:id="choiceBoxCourse" layoutX="229.0" layoutY="154.0" prefWidth="150.0" styleClass="subject-box" stylesheets="@styles.css" value="Course" />
+            <Button fx:id="btnCreateExam" layoutX="229.0" layoutY="323.0" mnemonicParsing="false" onAction="#onBtnCreateExamPressed" prefHeight="40.0" prefWidth="300.0" styleClass="btn-inner" stylesheets="@styles.css" text="Create Exam">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <StackPane layoutX="715.0" layoutY="14.0" onMouseClicked="#onBtnCloseClicked">
+               <children>
+                  <Circle fill="#fa5d57" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="12.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/xShape.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

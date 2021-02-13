@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1050.0">
+         <left>
+            <Pane prefHeight="600.0" prefWidth="473.0" styleClass="linear-grad" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="291.0" fitWidth="376.0" layoutX="56.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/LoginImage.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="101.0" layoutY="410.0" opacity="0.75" text="LU Examination" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="159.0" layoutY="454.0" opacity="0.75" text="Platform" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane fx:id="pnlSignUp" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FAFAFA;">
+                     <children>
+                        <Button fx:id="btnSignUp" layoutX="104.0" layoutY="500.0" mnemonicParsing="false" onAction="#onBtnSignUpClicked" prefHeight="53.0" prefWidth="370.0" styleClass="btn-login" stylesheets="@styles.css" text="Sign Up">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="txtNewName" layoutX="104.0" layoutY="50.0" prefHeight="53.0" prefWidth="370.0" promptText="Name">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="txtNewPass" layoutX="104.0" layoutY="320.0" prefHeight="53.0" prefWidth="370.0" promptText="New Password">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </PasswordField>
+                        <ImageView fx:id="btnBack" fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="24.0" onMouseClicked="#onBtnBackClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/back.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="txtNewEmail" layoutX="104.0" layoutY="230.0" prefHeight="53.0" prefWidth="370.0" promptText="Email">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="txtNewPassVerify" layoutX="104.0" layoutY="410.0" prefHeight="53.0" prefWidth="370.0" promptText="Confirm New Password">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </PasswordField>
+                        <ChoiceBox fx:id="choiceBoxGender" Value="Gender" layoutX="104.0" layoutY="140.0" prefWidth="150.0" styleClass="gender-box" stylesheets="@styles.css">
+                            <items>
+        						<FXCollections fx:factory="observableArrayList">
+            						<String fx:value="Male" />
+            						<String fx:value="Female" />
+       							</FXCollections>
+    						</items>
+                        </ChoiceBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnlSignIn" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FAFAFA;">
+                     <children>
+                        <TextField fx:id="txtEmail" layoutX="103.0" layoutY="158.0" prefHeight="53.0" prefWidth="370.0" promptText="Email">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="txtPass" layoutX="103.0" layoutY="263.0" onKeyPressed="#onKeyPressed" prefHeight="53.0" prefWidth="370.0" promptText="Password">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </PasswordField>
+                        <Label layoutX="104.0" layoutY="75.0" text="Sign In">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnSignIn" layoutX="104.0" layoutY="368.0" mnemonicParsing="false" onAction="#onBtnSignInClicked" prefHeight="53.0" prefWidth="370.0" styleClass="btn-login" stylesheets="@styles.css" text="Sign In">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnSignUpPage" layoutX="104.0" layoutY="473.0" mnemonicParsing="false" onAction="#onBtnSignUpPageClicked" prefHeight="53.0" prefWidth="370.0" styleClass="btn-signup" stylesheets="@styles.css" text="Don't have an account? Sign Up">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+      <HBox layoutX="995.0" layoutY="14.0" spacing="5.0">
+         <children>
+            <StackPane fx:id="btnMinimize" onMouseClicked="#onBtnMinimizeClicked" prefHeight="0.0" prefWidth="0.0">
+               <children>
+                  <Circle fill="#fdbb2d" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/minus.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane fx:id="btnClose" onMouseClicked="#onBtnCloseClicked">
+               <children>
+                  <Circle fill="#fa5d57" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="12.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/xShape.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

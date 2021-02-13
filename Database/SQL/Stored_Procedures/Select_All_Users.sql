@@ -1,0 +1,6 @@
+use [EXAMINATION]
+go
+CREATE PROCEDURE SelectAllUsers
+AS
+SELECT * FROM Users
+GO;

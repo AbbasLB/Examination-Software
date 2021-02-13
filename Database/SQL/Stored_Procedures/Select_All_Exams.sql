@@ -1,0 +1,6 @@
+use [EXAMINATION]
+go
+CREATE PROCEDURE selectAllExams
+AS
+SELECT * FROM Exams
+GO; 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="TPnlResults" prefHeight="600.0" prefWidth="790.0" styleClass="bg-inside" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TResultsController">
+   <children>
+      <TableView fx:id="TableTeacherResults" layoutX="73.0" layoutY="89.0" prefHeight="458.0" prefWidth="645.0" styleClass="results-table" stylesheets="@styles.css">
+      	 <placeholder>
+         	<Label style="-fx-font-size: 14pt;" text="No Results Yet" textFill="#3c3c64" />
+   		 </placeholder>
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="131.0" text="Name" />
+          <TableColumn fx:id="colEmail" prefWidth="172.0" text="Email" />
+            <TableColumn fx:id="colCourse" prefWidth="78.0" text="Course" />
+            <TableColumn fx:id="colExamTitle" prefWidth="206.0" text="ExamTitle" />
+            <TableColumn fx:id="colGrade" prefWidth="56.0" text="Grade" />
+        </columns>
+      </TableView>
+      <Label layoutX="73.0" layoutY="40.0" text="Results" textFill="#3c3c64">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgRefresh" fitHeight="23.0" fitWidth="27.0" layoutX="725.0" layoutY="89.0" onMouseClicked="#onImgRefreshClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

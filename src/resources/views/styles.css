@@ -1,0 +1,159 @@
+.linear-grad
+{
+	-fx-background-color: linear-gradient(to bottom left,#6f4cbb,#431FA0);
+}
+
+
+.btn-login
+{
+	-fx-background-color:#6F4CBB;
+	-fx-text-fill: #ffffff;
+}
+
+.btn-login:hover
+{
+	-fx-text-fill:#431FA0;
+}
+.btn-login:pressed
+{
+	-fx-text-fill:#371897;
+}
+.btn-login:active
+{
+	-fx-text-fill:#80AFF5;
+}
+
+.btn-signup
+{
+	-fx-background-color:#D5CBEB;
+	-fx-background-radius: 5;
+	-fx-text-fill: #371897;
+	-fx-border-color: #6F4CBB;
+	-fx-border-radius: 5;
+}
+
+.btn-signup:hover
+{
+	-fx-background-color:#E4EEFD;
+}
+.btn-signup:pressed
+{
+	-fx-background-color:#E4EEFD;
+	-fx-background-radius: 20;
+	
+}
+
+.bg-orange{
+	-fx-background-color: #FCDD9C;
+}
+
+.bg-violet{
+	-fx-background-color: #CDA6EC;
+}
+
+.bg-pink{
+	-fx-background-color: #FF8399;
+}
+
+.bg-blue{
+	-fx-background-color: #7DA6FA;
+}
+
+.menu-button
+{
+	-fx-background-color : #F3F3F3;
+	-fx-text-fill : #3C3C64;
+}
+
+.bg-inside{
+	-fx-background-color : #E9E9E9;
+	
+}
+.bg-item{
+	-fx-background-color :#f9f9f9;
+	
+}
+
+.btn-inner{
+	-fx-background-color :#5A5AB5;
+	-fx-text-fill : #FFFFFF;
+	-fx-background-radius:10;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.my-font-color{
+	-fx-text-fill : #3C3C64;
+}
+
+.gender-box {
+    -fx-pref-width: 370;
+    -fx-pref-height: 53;
+    -fx-background-color:white; 
+    -fx-border-color:#c0c0c0;
+    -fx-border-radius:3;
+    -fx-font-size:16px; 
+}
+
+.gender-box .label {
+     -fx-text-fill: black; 
+}
+
+.gender-box  .context-menu {
+    -fx-pref-width: 370;
+}
+
+.subject-box {
+    -fx-pref-width: 300;
+    -fx-pref-height: 40;
+    -fx-background-color:white; 
+    -fx-border-color:#c0c0c0;
+    -fx-border-radius:3;
+    -fx-font-size:16px; 
+}
+
+.subject-box .label {
+     -fx-text-fill: black; 
+}
+
+.subject-box  .context-menu {
+    -fx-pref-width: 297;
+}
+
+.Add-Course-box {
+    -fx-pref-width: 300;
+    -fx-pref-height: 40;
+    -fx-background-color:white; 
+    -fx-border-color:#c0c0c0;
+    -fx-border-radius:3;
+    -fx-font-size:16px; 
+}
+
+.Add-Course-box  .label {
+     -fx-text-fill: black; 
+}
+
+.Add-Course-box  .context-menu {
+    -fx-pref-width: 297;
+}
+
+
+.results-table .table-column{
+	-fx-alignment: CENTER;
+}
+
+.color-green{
+	-fx-text-fill: #15c978;
+}
+
+.popup{
+	-fx-border-color:BLACK;
+	-fx-border-width:0.3;
+	-fx-border-radius:10;
+	-fx-background-radius:10;
+	-fx-background-color: #F9F9F9;
+}
+
+

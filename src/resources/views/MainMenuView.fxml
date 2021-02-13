@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainMenuController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="260.0" styleClass="menu-button" stylesheets="@styles.css">
+         <children>
+            <ImageView fx:id="imgProfile" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/MaleTeacher.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label fx:id="lblUserName" text="Teacher Abbas Khreiss" textFill="#3c3c64">
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCourses" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleMenuButtons" prefHeight="60.0" prefWidth="257.0" styleClass="menu-button" stylesheets="@styles.css" text="Courses">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Courses.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="55.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnExam" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleMenuButtons" prefHeight="60.0" prefWidth="257.0" styleClass="menu-button" stylesheets="@styles.css" text="Exams">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Exams.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="55.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnResult" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleMenuButtons" prefHeight="60.0" prefWidth="257.0" styleClass="menu-button" stylesheets="@styles.css" text="Results">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Results.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="55.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnAccount" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="397.0" mnemonicParsing="false" onAction="#handleMenuButtons" prefHeight="60.0" prefWidth="257.0" styleClass="menu-button" stylesheets="@styles.css" text="Account">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Account.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="55.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnLogOut" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="364.0" mnemonicParsing="false" onAction="#onBtnLogOutClicked" prefHeight="60.0" prefWidth="257.0" styleClass="menu-button" stylesheets="@styles.css" text="Log out">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/LogOut.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="55.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane fx:id="stackPane" layoutX="260.0" prefHeight="600.0" prefWidth="790.0" styleClass="bg-inside" stylesheets="@styles.css" />
+      <HBox layoutX="995.0" layoutY="14.0" spacing="5.0">
+         <children>
+            <StackPane onMouseClicked="#onBtnMinimizeClicked" prefHeight="0.0" prefWidth="0.0">
+               <children>
+                  <Circle fill="#fdbb2d" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="20.0" fitWidth="15.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/minus.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <StackPane onMouseClicked="#onBtnCloseClicked">
+               <children>
+                  <Circle fill="#fa5d57" radius="9.0" stroke="BLACK" strokeType="INSIDE" />
+                  <ImageView fitHeight="12.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/xShape.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

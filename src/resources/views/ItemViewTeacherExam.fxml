@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="paneItem" prefHeight="50.0" prefWidth="700.0" style="-fx-background-radius: 12;" styleClass="bg-item" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ItemTeacherExamController">
+   <left>
+      <Pane prefHeight="50.0" prefWidth="616.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblCourseName" layoutX="23.0" layoutY="9.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 8; -fx-alignment: center;" styleClass="bg-blue" stylesheets="@styles.css" text="Course" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgCourseSubject" fitHeight="30.0" fitWidth="30.0" layoutX="140.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/math.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblExamTitle" layoutX="182.0" layoutY="16.0" text="Exam title" textFill="#3c3c64" />
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane prefHeight="50.0" prefWidth="80.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imgEditCourse" fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="15.0" onMouseClicked="#onImgEditCourseClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/edit.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imgDeleteCourse" fitHeight="20.0" fitWidth="20.0" layoutX="45.0" layoutY="15.0" onMouseClicked="#onImgDeleteCourseClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/delete.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
